@@ -1,30 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ComponentTest from './components/ComponentTest'
 
-function App() {
+function App(state,props) {
+  console.log("最外面的包裹组件app, 是个函数组件,没有state,props,this>>",state, props, this)
   return (
     <div className="App">
       <header className="App-header">
         <ComponentTest >
 
         </ComponentTest>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
     </div>
   );
 }
 
 export default App;
+console.log("export export >>", React.Component)
